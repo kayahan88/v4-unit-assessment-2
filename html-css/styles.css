@@ -12,3 +12,131 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 200vh;
+    
+}
+
+main {
+    display: flex;
+    position: relative;
+    width: 100vw;
+}
+
+header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    color: rgb(42, 171, 226);
+    height: 50px;
+    padding: 10px;
+    font-family: arial;
+    z-index: 1;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -15px;
+    margin-right: 10px;
+}
+
+.link {
+    margin-left: 30px;
+}
+
+.top-half {
+    display: inline-block;
+}
+
+.container-1 {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 130px;
+    width: 50vw;
+    height: 600px;
+}
+
+.skills-check {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+h2 {
+    position: relative;
+    top: 0px;
+    width: 50vw;
+    font-family: arial;
+    font-size: larger;
+}
+
+.paragraphs {
+    position: relative;
+    top: 50px;
+}
+
+.space {
+    height: 10px;
+}
+
+.container-2 {
+    display: inline-block;
+    position: relative;
+    left: 200px;
+    top: 65px;
+}
+
+.profile-icon {
+    height: 150px;
+    width: 50px;
+    border: solid 1px;
+    width: 20vw;
+    margin-bottom: 30px;
+    box-shadow: rgba(102, 75, 75, .3);
+}
+
+.list {
+    height: 300px;
+    width: 50px;
+    border: solid 1px;
+    width: 20vw;
+}
+
+
+
+.container-3 {
+    top: 90px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left: 130px;
+    padding: 15px;
+    height: 300px;
+    width: 50vw;
+    
+}
+
+h3 {
+    position: relative;
+    width: 50vw;
+    left: 130px;
+    top: 40px;
+    font-family: Arial;
+}
+
+.box {
+    background-color: red;
+    height: 100px;
+    width: 170px;
+    margin: 20px;
+}
