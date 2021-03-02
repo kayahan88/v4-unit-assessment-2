@@ -82,7 +82,17 @@ const products = [
 */
 
 //CODE HERE
-// let saleProducts = products.map(element => element.price = element.price * 0.75)
+
+
+let saleProducts = products.map(elem => ({
+  name: elem.name,
+  color: elem.color,
+  price: elem.price*.75
+}))
+
+
+
+// products.map(element => element.price = element.price * 0.75);
 
 
 ////////////////////PROBLEM 3////////////////////
@@ -94,7 +104,9 @@ const products = [
 */
 
 //CODE HERE
-// let blueProducts = saleProducts.filter(element => element.includes('blue'))
+let blueProducts = saleProducts.filter(function(elem){
+  return elem.color.includes('blue')
+})
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -104,7 +116,9 @@ const products = [
 */
 
 //CODE HERE
-// let orderTotal = blueProducts.reduce(function)
+let orderTotal = blueProducts.reduce(function(acc, val){
+  return (acc + val.price)
+}, 0)
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*

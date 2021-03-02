@@ -9,7 +9,7 @@
 */
 
 //CODE HERE
-myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
+myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77];
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -18,10 +18,10 @@ myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
     called 'foundZ'.
 */
 
-const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
+const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a'];
 
 //CODE HERE
-let foundZ = nestedLetters[5][2][1]
+let foundZ = nestedLetters[5][2][1];
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -37,7 +37,7 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-let animals = [...forest, ...ocean, ...savannah, ...desert]
+let animals = [...forest, ...ocean, ...savannah, ...desert];
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,8 +45,8 @@ let animals = [...forest, ...ocean, ...savannah, ...desert]
 */
 
 //CODE HERE
-let animalsCopy = [...animals]
-animalsCopy.push('elephant')
+let animalsCopy = [...animals];
+animalsCopy.push('elephant');
 
 
 ////////////////////PROBLEM 4////////////////////
@@ -66,7 +66,7 @@ compareNums = (num1, num2) => {
     } else {
         return num1
     }
-}
+};
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -78,7 +78,7 @@ compareNums = (num1, num2) => {
 */
 
 //CODE HERE
-  bestMovie = movie => `${movie} is the best movie ever!`
+  let bestMovie = movie => `${movie} is the best movie ever!`;
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -86,7 +86,7 @@ compareNums = (num1, num2) => {
 */
 
 //CODE HERE
-var jsNinja = () => 'I am a JavaScript ninja!'
+var jsNinja = () => 'I am a JavaScript ninja!';
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -107,7 +107,7 @@ var jsNinja = () => 'I am a JavaScript ninja!'
 */
 
 //CODE HERE
-  delete gameInfo.rating
+  delete gameInfo.rating;
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -120,7 +120,7 @@ var jsNinja = () => 'I am a JavaScript ninja!'
     hexagon: 6, 
     septagon: 7,
     octagon: 8
-  }
+  };
 //DO NOT EDIT CODE ABOVE
   
 /*
@@ -129,11 +129,17 @@ var jsNinja = () => 'I am a JavaScript ninja!'
 */
 
 //CODE HERE
+function evenShapes(shapes){
   for(let key in shapes){
-      if (shapes[key] % 2 !== 0){
-          delete key
-      } 
-  }
+      if (shapes[key] % 2 === 0){
+          
+      } else{
+        delete shapes[key]
+      }
+    }
+    return shapes
+  };
+  console.log(evenShapes(shapes))
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -175,13 +181,18 @@ const classes = [
 */
 
 //CODE HERE
-for (let i = 0; i < classes.length; i++){
-    for (let key in obj){
-        if(obj[i][key] === true){
-            obj[i][key] = false
+
+function noHomework(){
+    for (let i = 0; i < classes.length; i++){
+        for (let key in obj){
+            if(obj[i][key] === true){
+                obj[i][key] = false
+            }
         }
     }
+    return classes
 }
+
 
   
 ////////////////////PROBLEM 10////////////////////
@@ -193,18 +204,22 @@ for (let i = 0; i < classes.length; i++){
 */
   
 //DO NOT EDIT CODE BELOW  
-const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']  
+const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']; 
 let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-for (let i = 0; i < lettersToPair.length; i++){
-    for (let j = lettersToPair.length - 1; j >= 0; j--){
-        if (lettersToPair[j] === lettersToPair[i] && j > i){
+function pairs(lettersToPair){
+    for (let i = 0; i < lettersToPair.length; i++){
+        for (let j = lettersToPair.length - 1; j > [i]; j--){
+            if (lettersToPair[i] === lettersToPair[j]){
             pairsArray.push([i, j])
+            }
         }
     }
-}
+    return pairsArray
+};
+pairs(lettersToPair);
     //Arrays - More Methods (indexOf)
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
@@ -226,7 +241,7 @@ function Dog(name, age, breed, tricks){
     this.age = age;
     this.breed = breed;
     this.tricks = tricks
-}
+};
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -235,7 +250,7 @@ function Dog(name, age, breed, tricks){
 */
 
 //CODE HERE
-  const fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
+  const fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake']);
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -247,7 +262,7 @@ function Dog(name, age, breed, tricks){
 //CODE HERE
 function bark(){
     return `${this.name} says bark!`
-}
+};
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -255,7 +270,7 @@ function bark(){
 */
 
 //CODE HERE
-  const fidoSpeak = bark.call(fido, this.name)
+  const fidoSpeak = bark.call(fido, this.name);
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -267,8 +282,9 @@ function bark(){
 
 //CODE HERE
 function teachTrick(trick){
-    this.tricks.push(trick)
-}
+    this.tricks.push(trick);
+    return this.tricks;
+};
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -276,7 +292,7 @@ function teachTrick(trick){
 */
 
 //CODE HERE
-const teachStay = teachTrick.bind(fido, 'stay')
+const teachStay = teachTrick.bind(fido, 'stay');
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -289,7 +305,7 @@ const teachStay = teachTrick.bind(fido, 'stay')
 //CODE HERE
 function dogIntro(treat, toy){
     return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`
-}
+};
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -298,7 +314,7 @@ function dogIntro(treat, toy){
 */
 
 //CODE HERE
-let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])
+let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -314,7 +330,7 @@ function Phone(brand, model, storage, color, sold){
     this.storage = storage;
     this.color = color;
     this.sold = sold;
-}
+};
   
 /*
     Next make three new phones using your constructor function.
@@ -328,11 +344,11 @@ function Phone(brand, model, storage, color, sold){
 */
 
 //CODE HERE
-  let phone1 = new Phone('string', 'string', 1, 'string', false)
+  let phone1 = new Phone('string', 'string', 1, 'string', false);
   
-  let phone2 = new Phone('string', 'string', 1, 'string', false)
+  let phone2 = new Phone('string', 'string', 1, 'string', false);
   
-  let phone3 = new Phone('string', 'string', 1, 'string', false)
+  let phone3 = new Phone('string', 'string', 1, 'string', false);
   
 /*
     Last, add a prototype method to Phone.
@@ -344,7 +360,7 @@ function Phone(brand, model, storage, color, sold){
 
 //CODE HERE
 Phone.prototype.sell = function(){
-    Phone.sold = true;
+    this.sold = true;
     return `${this.brand} ${this.model} has been sold.`
-}
+};
   
